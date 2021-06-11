@@ -1,0 +1,42 @@
+.row {
+  margin-left: 20px;
+  color: white;
+}
+
+.row-posters {
+  /* convert column to row */
+  display: flex;
+  /* comletly off the functions in y axis */
+  overflow-y: hidden;
+  /* we can scroll X axis */
+  overflow-x: scroll;
+  padding: 20px;
+}
+
+.row-posters::-webkit-scrollbar {
+  /* doesnt show the scroll bar */
+  display: none;
+}
+
+.row-poster {
+  object-fit: contain;
+  width: 100%;
+  max-height: 100px;
+  margin-right: 10px;
+  /* transform will delay some seconds if the size changes */
+  transition: transform 450ms;
+}
+
+.row-poster:hover {
+  /* this will give slightly grow when we hover over to the posters */
+  transform: scale(1.08);
+}
+
+.row-posterlarge {
+  max-height: 250px;
+}
+
+.row-posterlarge:hover {
+  /* this will give slightly grow when we hover over to the posters */
+  transform: scale(1.09);
+}
